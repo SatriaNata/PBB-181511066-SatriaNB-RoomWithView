@@ -1,0 +1,21 @@
+package com.task4snb.simpandata;
+
+import androidx.annotation.NonNull;
+import androidx.lifecycle.LiveData;
+import androidx.room.ColumnInfo;
+import androidx.room.Dao;
+import androidx.room.Entity;
+import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
+import androidx.room.PrimaryKey;
+import androidx.room.Query;
+
+@Entity (tableName = "word_table")
+public class Word {
+    @PrimaryKey
+    @NonNull
+    @ColumnInfo(name = "word")
+    private String mWord;
+    public Word(@NonNull String word) {this.mWord = word;}
+    public String getWord(){return this.mWord;}
+}
